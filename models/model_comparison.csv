@@ -1,0 +1,8 @@
+Model,Type,Test_2026_MAE,Test_2026_RMSE,Test_2026_R2,Test_2026_MAPE_%
+Moving Average (7-Day),Baseline,232.67,322.72,0.8576,20.38
+Random Forest,Machine Learning,252.37,327.49,0.8534,25.75
+Ridge Regression,Machine Learning,253.76,353.25,0.8294,21.21
+Naive (Previous Price),Baseline,258.20,368.39,0.8145,21.61
+XGBoost,Machine Learning,259.19,336.22,0.8455,26.26
+Linear Regression,Machine Learning,263.06,364.61,0.8183,21.65
+Gradient Boosting,Machine Learning,267.49,338.41,0.8435,26.31

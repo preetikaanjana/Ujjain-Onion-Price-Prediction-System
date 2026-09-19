@@ -1,0 +1,29 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environments
+.env
+.venv
+env/
+venv/
+ENV/
+
+# Testing cache
+.pytest_cache/
+
+# Legacy prototype directories
+MandiPredict/
+model/
+utils/
+
+# Streamlit config (keep config.toml, ignore cache/secrets)
+.streamlit/*
+!.streamlit/config.toml
+
+# IDEs
+.idea/
+.vscode/
+*.swp
+*.swo
