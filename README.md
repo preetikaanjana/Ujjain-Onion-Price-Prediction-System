@@ -3,7 +3,7 @@
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
 [![Framework](https://img.shields.io/badge/Framework-Streamlit-red.svg)](https://streamlit.io/)
 [![Source](https://img.shields.io/badge/Data%20Source-AGMARKNET%202.0%20API-green.svg)](https://agmarknet.gov.in/)
-[![Dataset](https://img.shields.io/badge/Dataset-2024--2026%20Verified-orange.svg)](DATA_SOURCE.md)
+[![Dataset](https://img.shields.io/badge/Dataset-2024--2026%20Verified-orange.svg)](#3-data-source)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)
 
 An empirical, end-to-end machine learning time-series forecasting application predicting wholesale onion mandi prices specifically for **Ujjain APMC, Madhya Pradesh, India**, using 100% verified historical Indian government records through **September 19, 2026**.
@@ -178,8 +178,5 @@ OnionPrice AI/
 ├── app.py
 ├── requirements.txt
 ├── render.yaml
-├── DATA_SOURCE.md
-├── MODEL_CARD.md
-├── INTERVIEW_PREPARATION.md
 └── README.md
 ```

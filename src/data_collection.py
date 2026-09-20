@@ -102,8 +102,7 @@ def load_raw_data(filepath: Optional[str] = None) -> pd.DataFrame:
     candidates = [
         filepath,
         os.path.join(PROJECT_ROOT, 'data', 'processed', 'ujjain_onion_clean.csv'),
-        os.path.join(PROJECT_ROOT, 'data', 'raw', 'ujjain_onion_raw.csv'),
-        os.path.join(PROJECT_ROOT, 'data', 'ujjain_onion_prices.csv')
+        os.path.join(PROJECT_ROOT, 'data', 'raw', 'ujjain_onion_raw.csv')
     ]
     for p in candidates:
         if p and os.path.exists(p):
