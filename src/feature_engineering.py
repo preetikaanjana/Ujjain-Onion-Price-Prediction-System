@@ -4,6 +4,7 @@ Generates comprehensive time-series features (Lags 1-30, Rolling Statistics 7-30
 Calendar Signals, and Momentum Indicators) with strict zero-leakage guarantees.
 """
 
+import os
 import sys
 from pathlib import Path
 import pandas as pd
@@ -106,9 +107,14 @@ if __name__ == '__main__':
     clean_df = load_and_preprocess(save_processed=False)
     feat_df = create_features(clean_df)
     X, y, cols = get_feature_matrix(clean_df)
+    
+    out_path = os.path.join(PROJECT_ROOT, 'data', 'processed', 'ujjain_onion_features.csv')
+    feat_df.to_csv(out_path, index=False)
+    
     print("Feature Engineering Verification:")
     print(f"  Input daily rows: {len(clean_df)}")
     print(f"  Rows after 30-period lag warm-up: {len(feat_df)}")
     print(f"  Feature count: {X.shape[1]}")
     print(f"  Feature columns: {cols}")
     print("  Zero NaN values in features:", X.isnull().sum().sum() == 0)
+    print(f"  Saved full 20-feature dataset to: {out_path}")
