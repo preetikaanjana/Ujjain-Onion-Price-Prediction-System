@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ujjain Onion Price Prediction System | उज्जैन प्याज भाव पूर्वानुमान</title>
+    <!-- Plotly.js for interactive charting -->
+    <script src="https://cdn.plot.ly/plotly-2.30.0.min.js"></script>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/static/css/styles.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Header Bar -->
+        <header class="header">
+            <div class="brand">
+                <div class="logo-icon">🧅</div>
+                <div>
+                    <h1 id="title-text">Ujjain Onion Price Prediction System</h1>
+                    <p class="subtitle" id="subtitle-text">Official AGMARKNET Data | Ujjain APMC, Madhya Pradesh</p>
+                </div>
+            </div>
+            <div class="header-actions">
+                <div class="lang-selector">
+                    <label for="lang-select" id="lang-label">🌐 Language:</label>
+                    <select id="lang-select">
+                        <option value="en" selected>English</option>
+                        <option value="hi">हिन्दी (Hindi)</option>
+                    </select>
+                </div>
+                <div class="status-badge" id="status-badge">
+                    <span class="status-dot"></span>
+                    <span id="status-text">Connecting...</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- Control Bar -->
+        <section class="control-panel">
+            <div class="control-group">
+                <label id="horizon-label">Select Forecast Horizon:</label>
+                <div class="btn-group" id="horizon-btn-group">
+                    <button class="btn-horizon" data-horizon="1">1 Day Ahead (1 दिन)</button>
+                    <button class="btn-horizon active" data-horizon="7">7 Days Ahead (7 दिन)</button>
+                    <button class="btn-horizon" data-horizon="14">14 Days Ahead (14 दिन)</button>
+                </div>
+            </div>
+            <button class="btn-primary" id="btn-fetch">
+                <span>🔄</span> <span id="btn-fetch-text">Forecast Prices</span>
+            </button>
+        </section>
+
+        <!-- KPI Metric Cards -->
+        <section class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-title" id="m1-title">Latest Mandi Price</span>
+                    <span class="metric-icon">📌</span>
+                </div>
+                <div class="metric-value" id="m1-value">₹ --</div>
+                <div class="metric-sub" id="m1-sub">100 kg (Quintal)</div>
+            </div>
+
+            <div class="metric-card highlight">
+                <div class="metric-header">
+                    <span class="metric-title" id="m2-title">Forecasted Price</span>
+                    <span class="metric-icon">🎯</span>
+                </div>
+                <div class="metric-value" id="m2-value">₹ --</div>
+                <div class="metric-badge" id="m2-badge">--</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-title" id="m3-title">Est. 50kg Bag Price</span>
+                    <span class="metric-icon">🛍️</span>
+                </div>
+                <div class="metric-value" id="m3-value">₹ --</div>
+                <div class="metric-sub" id="m3-sub">Standard Farmer Bag</div>
+            </div>
+
+            <div class="metric-card">
+                <div class="metric-header">
+                    <span class="metric-title" id="m4-title">Market Trend Direction</span>
+                    <span class="metric-icon">📈</span>
+                </div>
+                <div class="metric-value" id="m4-value">--</div>
+                <div class="metric-sub" id="m4-sub">Short-term Momentum</div>
+            </div>
+        </section>
+
+        <!-- Main Chart Section -->
+        <section class="chart-section">
+            <div class="chart-header">
+                <h2 id="chart-title">Historical Prices & Future Forecast Horizon</h2>
+                <div class="chart-legend-info" id="chart-info">Loading verified 2024–2026 Ujjain market trend...</div>
+            </div>
+            <div id="plotly-chart" class="plotly-box"></div>
+        </section>
+
+        <!-- Detailed Forecast Table -->
+        <section class="data-section">
+            <h2 id="table-title">Forecasted Day-by-Day Schedule</h2>
+            <div class="table-container">
+                <table class="data-table" id="forecast-table">
+                    <thead>
+                        <tr>
+                            <th>Step (दिन)</th>
+                            <th>Forecast Date (तारीख)</th>
+                            <th>Quintal Price (₹ / Q)</th>
+                            <th>50kg Bag Price (₹ / 50kg)</th>
+                            <th>Estimated Uncertainty Range (अनुमानित दायरा)</th>
+                        </tr>
+                    </thead>
+                    <tbody id="table-body">
+                        <tr>
+                            <td colspan="5" class="text-center">Loading forecast data...</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <!-- Model Benchmarks & Information Footer -->
+        <footer class="info-footer">
+            <div class="footer-card">
+                <h3 id="benchmark-title">📊 Model Evaluation Benchmarks (Unseen 2026 Test Period)</h3>
+                <div id="metrics-summary">Loading model comparison metrics...</div>
+            </div>
+            <p class="copyright">Ujjain Onion Price Prediction System &copy; 2026 | Built with FastAPI & Vanilla JavaScript</p>
+        </footer>
+    </div>
+
+    <!-- Vanilla JavaScript App Engine -->
+    <script src="/static/js/app.js"></script>
+</body>
+</html>
