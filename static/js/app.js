@@ -252,8 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
             y: histPrices,
             mode: 'lines+markers',
             name: currentLanguage === 'hi' ? 'वास्तविक मंडी भाव' : 'Actual Mandi Price',
-            line: { color: '#211922', width: 2.5 },
-            marker: { size: 4, color: '#211922' }
+            line: { color: '#CBD5E1', width: 2.5 },
+            marker: { size: 4, color: '#CBD5E1' }
         };
 
         const traceUpper = {
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
             y: lowerBounds,
             mode: 'lines',
             fill: 'tonexty',
-            fillcolor: 'rgba(230, 0, 35, 0.12)',
+            fillcolor: 'rgba(230, 0, 35, 0.22)',
             line: { width: 0 },
             name: currentLanguage === 'hi' ? 'अनुमानित अनिश्चितता सीमा' : 'Uncertainty Range'
         };
@@ -285,11 +285,22 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         const layout = {
+            paper_bgcolor: 'rgba(0,0,0,0)',
+            plot_bgcolor: 'rgba(0,0,0,0)',
+            font: { color: '#A8A3AD', family: 'Plus Jakarta Sans, sans-serif' },
             margin: { l: 50, r: 20, t: 20, b: 40 },
             hovermode: 'x unified',
-            legend: { orientation: 'h', y: 1.1, x: 0 },
-            xaxis: { title: currentLanguage === 'hi' ? 'तारीख (Date)' : 'Date' },
-            yaxis: { title: currentLanguage === 'hi' ? 'भाव (₹ / क्विंटल)' : 'Price (₹ / Quintal)' }
+            legend: { orientation: 'h', y: 1.1, x: 0, font: { color: '#F5F3F7' } },
+            xaxis: {
+                title: currentLanguage === 'hi' ? 'तारीख (Date)' : 'Date',
+                gridcolor: '#2E2A33',
+                zerolinecolor: '#2E2A33'
+            },
+            yaxis: {
+                title: currentLanguage === 'hi' ? 'भाव (₹ / क्विंटल)' : 'Price (₹ / Quintal)',
+                gridcolor: '#2E2A33',
+                zerolinecolor: '#2E2A33'
+            }
         };
 
         Plotly.newPlot('plotly-chart', [traceHist, traceUpper, traceLower, tracePred], layout, {responsive: true});
