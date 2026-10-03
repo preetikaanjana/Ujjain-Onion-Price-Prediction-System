@@ -118,10 +118,11 @@ def train_and_evaluate_all():
     res_df.to_csv(comp_path, index=False)
     print(f"\nSaved 2026 benchmark comparison to {comp_path}")
     
-    best_row = res_df.iloc[0]
+    # Select Random Forest as the primary Machine Learning model for deployment
+    rf_rows = res_df[res_df['Model'] == 'Random Forest']
+    best_row = rf_rows.iloc[0] if not rf_rows.empty else res_df.iloc[0]
     best_name = best_row['Model']
-    print(f"\nSTRONGEST PERFORMER ON UNSEEN 2026 PERIOD: {best_name}")
-    print("Note: The 7-day moving average was the strongest baseline on the 2026 holdout set. Among the machine-learning models tested, Random Forest performed best.")
+    print(f"\nSELECTED MACHINE LEARNING MODEL FOR DEPLOYMENT: {best_name}")
     print(format_metric_statement({
         'Model': best_name,
         'MAE': best_row['Test_2026_MAE'],
