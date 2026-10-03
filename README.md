@@ -1,7 +1,8 @@
 # Ujjain Onion Price Prediction System (2026)
 
 [![Python 3.12](https://img.shields.io/badge/Python-3.12-blue.svg)](https://www.python.org/)
-[![Framework](https://img.shields.io/badge/Framework-Streamlit-red.svg)](https://streamlit.io/)
+[![Framework](https://img.shields.io/badge/Framework-FastAPI-green.svg)](https://fastapi.tiangolo.com/)
+[![Frontend](https://img.shields.io/badge/Frontend-Vanilla%20JS-yellow.svg)](static/index.html)
 [![Source](https://img.shields.io/badge/Data%20Source-AGMARKNET%202.0%20API-green.svg)](https://agmarknet.gov.in/)
 [![Dataset](https://img.shields.io/badge/Dataset-2024--2026%20Verified-orange.svg)](#3-data-source)
 [![License](https://img.shields.io/badge/License-MIT-purple.svg)](LICENSE)

@@ -252,8 +252,8 @@ document.addEventListener('DOMContentLoaded', () => {
             y: histPrices,
             mode: 'lines+markers',
             name: currentLanguage === 'hi' ? 'वास्तविक मंडी भाव' : 'Actual Mandi Price',
-            line: { color: '#1E40AF', width: 2.5 },
-            marker: { size: 4 }
+            line: { color: '#211922', width: 2.5 },
+            marker: { size: 4, color: '#211922' }
         };
 
         const traceUpper = {
@@ -270,7 +270,7 @@ document.addEventListener('DOMContentLoaded', () => {
             y: lowerBounds,
             mode: 'lines',
             fill: 'tonexty',
-            fillcolor: 'rgba(30, 64, 175, 0.15)',
+            fillcolor: 'rgba(230, 0, 35, 0.12)',
             line: { width: 0 },
             name: currentLanguage === 'hi' ? 'अनुमानित अनिश्चितता सीमा' : 'Uncertainty Range'
         };
@@ -280,8 +280,8 @@ document.addEventListener('DOMContentLoaded', () => {
             y: predPrices,
             mode: 'lines+markers',
             name: currentLanguage === 'hi' ? 'पूर्वानुमानित भाव' : 'Forecast Horizon',
-            line: { color: '#DC2626', width: 3, dash: 'dash' },
-            marker: { size: 6, color: '#DC2626' }
+            line: { color: '#E60023', width: 3, dash: 'dash' },
+            marker: { size: 6, color: '#E60023' }
         };
 
         const layout = {
