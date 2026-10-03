@@ -1,18 +1,18 @@
 :root {
-    /* Dark Pinterest Aesthetic Palette */
+    /* Pure High-Contrast Dark Theme Palette */
     --pinterest-red: #E60023;
-    --pinterest-red-hover: #FF1F3D;
-    --pinterest-red-light: rgba(230, 0, 35, 0.22);
-    --pinterest-red-soft: rgba(230, 0, 35, 0.12);
-    --bg-main: #121113;
-    --card-bg: #1E1C21;
-    --card-bg-sub: #161518;
-    --text-primary: #F5F3F7;
-    --text-secondary: #A8A3AD;
-    --text-muted: #7E7985;
-    --border-color: #2E2A33;
-    --shadow-soft: 0 10px 30px rgba(0, 0, 0, 0.45);
-    --shadow-hover: 0 18px 38px rgba(230, 0, 35, 0.22);
+    --pinterest-red-hover: #FF1738;
+    --pinterest-red-light: rgba(230, 0, 35, 0.25);
+    --pinterest-red-soft: rgba(230, 0, 35, 0.14);
+    --bg-main: #09090B;
+    --card-bg: #121215;
+    --card-bg-sub: #18181C;
+    --text-primary: #FAFAFA;
+    --text-secondary: #A1A1AA;
+    --text-muted: #71717A;
+    --border-color: #27272A;
+    --shadow-soft: 0 12px 32px rgba(0, 0, 0, 0.6);
+    --shadow-hover: 0 18px 40px rgba(230, 0, 35, 0.28);
     --radius-xl: 20px;
     --radius-lg: 14px;
     --radius-pill: 9999px;
@@ -244,7 +244,7 @@ body {
 
 .metric-card.highlight {
     border-color: var(--pinterest-red-light);
-    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(230, 0, 35, 0.15) 100%);
+    background: linear-gradient(135deg, var(--card-bg) 0%, rgba(230, 0, 35, 0.16) 100%);
 }
 
 .metric-header {
